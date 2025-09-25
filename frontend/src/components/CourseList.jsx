@@ -3,8 +3,9 @@ import axios from 'axios';
 import CourseCard from './CourseCard';
 
 const CourseList = () => {
-  // ATENÇÃO: Substitua 'IP_DA_SUA_VM' pelo IP real da sua máquina virtual.
-  const API_URL = 'http://192.168.220.4:3223/api.php'; 
+  // ATENÇÃO: Substitua 'IP_DA_SUA_VM' pela sua configuração.
+  // A porta agora está corrigida para '8000'
+  const API_URL = 'http://192.168.220.4:8000/api.php'; 
 
   const [cursos, setCursos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,12 +14,18 @@ const CourseList = () => {
   useEffect(() => {
     axios.get(API_URL)
       .then(response => {
-        setCursos(response.data);
+        // Verifica se a resposta é um array. Se não for, é um erro.
+        if (Array.isArray(response.data)) {
+            setCursos(response.data);
+        } else {
+            console.error("A API retornou dados inválidos:", response.data);
+            setError("A API retornou uma resposta inválida. Verifique o arquivo api.php.");
+        }
         setLoading(false);
       })
       .catch(err => {
-        console.error("Erro ao buscar cursos. Verifique se o servidor PHP está rodando na VM e o IP está correto!", err);
-        setError("Não foi possível carregar os cursos. Tente novamente mais tarde.");
+        console.error("Erro ao buscar cursos. Detalhes:", err);
+        setError("Não foi possível carregar os cursos. Verifique se o servidor PHP está rodando na VM e o IP/porta estão corretos.");
         setLoading(false);
       });
   }, []);
