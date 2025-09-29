@@ -1,20 +1,20 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import CourseList from './components/CourseList';
-import Footer from './components/Footer';
+import IconAluno from './components/IconAluno';
+import HeroSection from './components/HeroSection';
+import CourseInfoBar from './components/CourseInfoBar';
+import AccordionSection from './components/AccordionSection';
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Banner />
-        <CourseList />
-      </main>
-      <Footer />
+    <div className="flex min-h-screen w-full flex-col items-center bg-uane-background">
+      <Navbar/>
+      <HeroSection/>
+      <CourseInfoBar/>
+      <CourseInfoBar/>
+      <AccordionSection/>
     </div>
   );
-};
+}
 
 export default App;
