@@ -20,3 +20,14 @@
   --uane-blue-background: #17254D;
 }
 
+
+/* Esconde a barra de rolagem para navegadores baseados em WebKit (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Esconde a barra de rolagem para IE, Edge e Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
