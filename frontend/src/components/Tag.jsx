@@ -1,12 +1,14 @@
+// src/components/Tag.jsx
+
 import React from 'react';
 
-function Tag(props) {
+function Tag({ name, className }) {
     return (
-             <div className='border-2 border-[#D0FBEB] text-[#D0FBEB] font-semibold p-1'>
-                    {props.name}
-             </div>
-    )
+        // AQUI ESTÁ A MUDANÇA: de 'text-xs' para 'text-sm'
+        <div className={`border-2 font-normal text-sm uppercase px-2 py-0.5 ${className}`}>
+            {name}
+        </div>
+    );
 }
-
 
 export default Tag;
