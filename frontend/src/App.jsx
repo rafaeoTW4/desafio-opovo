@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection';
 import CourseInfoBar from './components/CourseInfoBar';
 import AccordionSection from './components/AccordionSection';
 import CoursesSection from './components/CoursesSection';
+import InvestmentSection from './components/InvestmentSection';
 
 // Dados para a primeira seção
 const decisionInfoData = [
@@ -68,6 +69,7 @@ function App() {
         data={learningModulesData}
       />
       <CoursesSection />
+      <InvestmentSection />
     </div>
   );
 }
