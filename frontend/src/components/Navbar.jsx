@@ -6,7 +6,7 @@ import IconAluno from './IconAluno';
 
 function Navbar() {
     return (
-        <header className="flex h-[72px] w-full justify-center bg-uane-secondary px-18">
+        <header className="flex h-[72px] w-full justify-center bg-uane-secondary px-10">
             <section className="w-full max-w-[1440px] flex items-center justify-between">
                 <UaneLogo />
                 <nav className='flex gap-10'>

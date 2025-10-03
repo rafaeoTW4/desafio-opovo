@@ -7,6 +7,7 @@ import CourseInfoBar from './components/CourseInfoBar';
 import AccordionSection from './components/AccordionSection';
 import CoursesSection from './components/CoursesSection';
 import InvestmentSection from './components/InvestmentSection';
+import Footer from './components/Footer';
 
 // Dados para a primeira seção
 const decisionInfoData = [
@@ -70,6 +71,7 @@ function App() {
       />
       <CoursesSection />
       <InvestmentSection />
+      <Footer />
     </div>
   );
 }
