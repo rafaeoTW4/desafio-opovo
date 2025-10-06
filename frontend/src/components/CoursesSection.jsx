@@ -19,7 +19,7 @@ function CoursesSection() {
   const [error, setError] = useState(null);
 
   // AQUI ESTÁ A URL FINAL DA SUA API
-  const API_URL = 'http://192.168.220.4:3223/desafio-opovo/backend/api.php';
+  const API_URL = 'http://192.168.220.4:8000/desafio-opovo/backend/api.php';
 
   useEffect(() => {
     const fetchData = async () => {
