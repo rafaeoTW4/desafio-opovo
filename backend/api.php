@@ -17,37 +17,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 // A estrutura agora corresponde exatamente ao que o componente CourseCard do React espera.
 $cursos = [
     [
-        "imageSrc" => "http://192.168.220.4/images/Curso_1.jpg", // Caminho completo da imagem
+        "imageSrc" => "http://192.168.220.4:8000/images/Curso_1.jpg", // Caminho completo da imagem
         "tags" => ["EXTENSÃO", "BEM-VIVER"],
         "title" => "Educação Ambiental para um Presente Sustentável",
         "author" => "Por Fundação Demócrito Rocha"
     ],
     [
-        "imageSrc" => "http://192.168.220.4/images/Curso_2.jpg",
+        "imageSrc" => "http://192.168.220.4:8000/images/Curso_2.jpg",
         "tags" => ["CURTA DURAÇÃO", "TECNOLOGIA E PROFISSÃO"],
         "title" => "Como Implementar a Política Municipal de Educação Ambiental",
         "author" => "Por Daniel Pagliuca"
     ],
     [
-        "imageSrc" => "http://192.168.220.4/images/Curso_3.jpg",
+        "imageSrc" => "http://192.168.220.4:8000/images/Curso_3.jpg",
         "tags" => ["CURTA DURAÇÃO", "BEM-VIVER"],
         "title" => "Bullying: conhecer para combater",
         "author" => "Por Grecianny Carvalho"
     ],
     [
-        "imageSrc" => "http://192.168.220.4/images/Curso_4.jpg",
+        "imageSrc" => "http://192.168.220.4:8000/images/Curso_4.jpg",
         "tags" => ["EXTENSÃO", "BEM-VIVER"],
         "title" => "Gestão Fiscal Interfederativa",
         "author" => "Por Fundação Demócrito Rocha"
     ],
     [
-        "imageSrc" => "http://192.168.220.4/images/Curso_1.jpg",
+        "imageSrc" => "http://192.168.220.4:8000/images/Curso_1.jpg",
         "tags" => ["NOVO"],
         "title" => "Curso Adicional 5",
         "author" => "Autor"
     ],
     [
-        "imageSrc" => "http://192.168.220.4/images/Curso_2.jpg",
+        "imageSrc" => "http://192.168.220.4:8000/images/Curso_2.jpg",
         "tags" => ["NOVO"],
         "title" => "Curso Adicional 6",
         "author" => "Autor"
