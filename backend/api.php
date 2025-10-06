@@ -1,6 +1,6 @@
 <?php
 // Define o cabeçalho da resposta como JSON
-header("Content-Type: application/json");
+header("Content-Type: application/json; charset=utf-8");
 
 // Permite que o frontend (em outra porta ou domínio) acesse a API
 header("Access-Control-Allow-Origin: *"); 
@@ -13,29 +13,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit();
 }
 
-// Dados Falsos (mock) dos cursos
-// Substitua o 'IP_DA_SUA_VM' pela URL da sua imagem se tiver.
-// Usar placeholders é uma prática comum para testes.
+// --- Dados dos Cursos ---
+// A estrutura agora corresponde exatamente ao que o componente CourseCard do React espera.
 $cursos = [
     [
-        "id" => 1,
-        "nome" => "Desenvolvimento Front-end com React",
-        "descricao" => "Aprenda a construir interfaces modernas e reativas usando React.",
-        "imagem_url" => "https://placehold.co/400x250/06B6D4/FFFFFF.png?text=React+JS"
+        "imageSrc" => "http://192.168.220.4/images/Curso_1.jpg", // Caminho completo da imagem
+        "tags" => ["EXTENSÃO", "BEM-VIVER"],
+        "title" => "Educação Ambiental para um Presente Sustentável",
+        "author" => "Por Fundação Demócrito Rocha"
     ],
     [
-        "id" => 2,
-        "nome" => "Backend em PHP para Iniciantes",
-        "descricao" => "Construa APIs robustas e seguras do zero com PHP e conceitos RESTful.",
-        "imagem_url" => "https://placehold.co/400x250/4F46E5/FFFFFF.png?text=PHP+Backend"
+        "imageSrc" => "http://192.168.220.4/images/Curso_2.jpg",
+        "tags" => ["CURTA DURAÇÃO", "TECNOLOGIA E PROFISSÃO"],
+        "title" => "Como Implementar a Política Municipal de Educação Ambiental",
+        "author" => "Por Daniel Pagliuca"
     ],
     [
-        "id" => 3,
-        "nome" => "Design Responsivo na Prática",
-        "descricao" => "Domine as técnicas de layout e adapte sua aplicação para qualquer dispositivo.",
-        "imagem_url" => "https://placehold.co/400x250/22C55E/FFFFFF.png?text=Design"
+        "imageSrc" => "http://192.168.220.4/images/Curso_3.jpg",
+        "tags" => ["CURTA DURAÇÃO", "BEM-VIVER"],
+        "title" => "Bullying: conhecer para combater",
+        "author" => "Por Grecianny Carvalho"
+    ],
+    [
+        "imageSrc" => "http://192.168.220.4/images/Curso_4.jpg",
+        "tags" => ["EXTENSÃO", "BEM-VIVER"],
+        "title" => "Gestão Fiscal Interfederativa",
+        "author" => "Por Fundação Demócrito Rocha"
+    ],
+    [
+        "imageSrc" => "http://192.168.220.4/images/Curso_1.jpg",
+        "tags" => ["NOVO"],
+        "title" => "Curso Adicional 5",
+        "author" => "Autor"
+    ],
+    [
+        "imageSrc" => "http://192.168.220.4/images/Curso_2.jpg",
+        "tags" => ["NOVO"],
+        "title" => "Curso Adicional 6",
+        "author" => "Autor"
     ]
 ];
 
 // Converte o array PHP para JSON e o exibe
-echo json_encode($cursos);
+// JSON_UNESCAPED_UNICODE garante que acentos e caracteres especiais sejam exibidos corretamente
+echo json_encode($cursos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
