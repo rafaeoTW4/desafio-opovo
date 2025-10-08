@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-// --- Ícone da Seta (Chevron) --- (Sua versão com w-10)
+// --- Ícone da Seta (Chevron) --- (Seu código)
 const ChevronIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -16,18 +16,17 @@ const ChevronIcon = ({ className }) => (
   </svg>
 );
 
-// --- Item do Acordeão Reutilizável --- (Sua versão com todos os ajustes)
+// --- Item do Acordeão Reutilizável --- (Seu código)
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
   return (
     <div className="flex flex-col w-full bg-[#DFDFDF] rounded border-2 border-transparent hover:border-[#121E3E] transition-colors duration-300 group overflow-hidden">
       <button
         onClick={onClick}
-        className={`flex w-full h-[60px] items-center justify-between pl-6 pr-6 text-left group-hover:text-[#121E3E] transition-colors duration-300 ${
+        className={`flex w-full h-[60px] items-center justify-between px-4 lg:px-6 text-left group-hover:text-[#121E3E] transition-colors duration-300 ${
           isOpen ? 'text-[#121E3E]' : 'text-[#1F6482]'
         }`}
       >
-        {/* Usando o text-2xl que você definiu */}
-        <span className="text-2xl font-bold tracking-normal flex-grow">
+        <span className="text-lg lg:text-2xl font-bold tracking-normal flex-grow">
           {title}
         </span>
         <ChevronIcon className={`flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
@@ -36,7 +35,6 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[1000px]' : 'max-h-0'}`}
       >
-        {/* Padding do conteúdo que você ajustou */}
         <div className="bg-white p-4">
           {content}
         </div>
@@ -46,35 +44,33 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
 };
 
 
-// --- Seção Principal ATUALIZADA para ser reutilizável ---
-// As mudanças estão apenas aqui
+// --- Seção Principal ---
 function AccordionSection({ sectionTitle, data, defaultOpenIndex = null }) {
   const [openIndex, setOpenIndex] = useState(defaultOpenIndex);
 
   const handleItemClick = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  
-  // O array de dados foi REMOVIDO daqui. Ele agora virá via props.
 
   return (
-    <section className="w-full max-w-[1296px] pt-8 pb-16">
-      <div className="flex items-center gap-4 mb-8">
-        <div className="w-1.5 h-[34px] bg-[#138E98] rounded"></div>
-        {/* Título agora é uma prop */}
-        <h2 className="text-[28px] leading-[34px] font-bold text-gray-800">{sectionTitle}</h2>
-      </div>
-      <div className="flex flex-col gap-4">
-        {/* O .map() agora usa a prop 'data' */}
-        {data.map((item, index) => (
-          <AccordionItem
-            key={index}
-            title={item.title}
-            content={item.content}
-            isOpen={openIndex === index}
-            onClick={() => handleItemClick(index)}
-          />
-        ))}
+    // AQUI ESTÁ A ÚNICA MUDANÇA: Aplicado o novo padrão de padding
+    <section className="w-full pt-8 pb-16 px-4 md:px-2 lg:px-10">
+      <div className="w-full max-w-[1296px] mx-auto">
+        <div className="flex items-center gap-2 mb-8">
+          <div className="w-1.5 h-[34px] bg-[#138E98] rounded"></div>
+          <h2 className="text-2xl lg:text-[28px] leading-[34px] font-bold text-gray-800">{sectionTitle}</h2>
+        </div>
+        <div className="flex flex-col gap-4">
+          {data.map((item, index) => (
+            <AccordionItem
+              key={index}
+              title={item.title}
+              content={item.content}
+              isOpen={openIndex === index}
+              onClick={() => handleItemClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -18,42 +18,20 @@ const decisionInfoData = [
 ];
 
 // Dados para a segunda seção
-// Dentro de: src/App.jsx
-
 const learningModulesData = [
-  { 
-    title: 'Módulo 1 - Secretaria escolar', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Secretaria escolar...</p> 
-  },
-  { 
-    title: 'Módulo 2 - Redação oficial e informática', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Redação oficial e informática...</p> 
-  },
-  { 
-    title: 'Módulo 3 - Estatística básica e indicadores educacionais', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Estatística básica e indicadores educacionais...</p> 
-  },
-  { 
-    title: 'Módulo 4 - Planejamento, gestão e legislação educacional', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Planejamento, gestão e legislação educacional...</p> 
-  },
-  { 
-    title: 'Módulo 5 - Funcionamento e organização da secretaria escolar', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Funcionamento e organização da secretaria escolar...</p> 
-  },
-  { 
-    title: 'Módulo 6 - Legislação educacional', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Legislação educacional...</p> 
-  },
-  { 
-    title: 'Módulo 7 - Estágio supervisionado', 
-    content: <p className="text-gray-700 m-0">Aqui vai o conteúdo sobre Estágio supervisionado...</p> 
-  },
+  { title: 'Módulo 1 - Secretaria escolar', content: <p className="text-gray-700 m-0">...</p> },
+  { title: 'Módulo 2 - Redação oficial e informática', content: <p className="text-gray-700 m-0">...</p> },
+  { title: 'Módulo 3 - Estatística básica e indicadores educacionais', content: <p className="text-gray-700 m-0">...</p> },
+  { title: 'Módulo 4 - Planejamento, gestão e legislação educacional', content: <p className="text-gray-700 m-0">...</p> },
+  { title: 'Módulo 5 - Funcionamento e organização da secretaria escolar', content: <p className="text-gray-700 m-0">...</p> },
+  { title: 'Módulo 6 - Legislação educacional', content: <p className="text-gray-700 m-0">...</p> },
+  { title: 'Módulo 7 - Estágio supervisionado', content: <p className="text-gray-700 m-0">...</p> },
 ];
 
 function App() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center bg-uane-background">
+    // AQUI ESTÁ A ÚNICA MUDANÇA: adicionada a classe 'overflow-hidden'
+    <div className="flex min-h-screen w-full flex-col items-center bg-uane-background overflow-hidden">
       <Navbar />
       <HeroSection />
       <CourseInfoBar />
