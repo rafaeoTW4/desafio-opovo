@@ -1,13 +1,5 @@
 # Landing Page - Curso de Secretaria Escolar (Desafio UANE)
 
-> Projeto full stack de uma landing page responsiva para o curso de Secretaria Escolar, com dados de cursos carregados dinamicamente via API. O design foi implementado com fidelidade a partir de um protótipo no Figma.
-
-## 🎥 Demonstração em Vídeo
-
-*(DICA: Grave um vídeo curto (ou GIF) da sua tela mostrando o site final. Mostre a rolagem, o carrossel funcionando, o menu mobile abrindo, o layout se adaptando. Use um programa como ScreenToGif, Giphy Capture ou Kap. Coloque o arquivo na pasta do projeto e mude o link abaixo.)*
-
-![Demo do Projeto em Ação](caminho_para_seu_gif_aqui.gif)
-
 ## ✨ Features Implementadas
 
 - **Integração Full Stack:** Frontend em React consumindo uma API PHP para carregar a seção de cursos dinamicamente.
