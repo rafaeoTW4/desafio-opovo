@@ -6,9 +6,9 @@ Este repositório contém o código-fonte de uma landing page totalmente respons
 
 ---
 
-### Vídeo de apresentação do do projeto rodando e sua responsividade
+### Vídeo de apresentação do projeto rodando e sua responsividade
 
-![Prévia da Landing Page em Desktop e Mobile](./caminho/para/sua/imagem.png)
+[Demonstração da Landing Page quanto à responsividade em telas para Desktop e Mobile](https://drive.google.com/file/d/1GUf6Qcb71f_wsQL5iGb_geH-CsC-oSYV/view?usp=sharing)
 
 ---
 
