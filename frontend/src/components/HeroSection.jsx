@@ -2,20 +2,22 @@
 
 import React from 'react';
 import Tag from './Tag';
-// Suas importações de logo foram removidas pois você usa a imagem Barra_de_marcas.png
 
 function HeroSection() {
     return (
-        // MUDANÇA AQUI: Ajustado o padding para telas de tablet (md)
-        <section className='flex justify-center w-full bg-uane-blue py-7 md:py-12 lg:py-16 px-4 md:px-10 lg:px-[var(--page-padding-x)]'>
+        <section className='flex justify-center w-full bg-uane-blue py-12'>
             
-            <div className='w-full max-w-section-default flex flex-col lg:flex-row items-center justify-center gap-4'>
+            <div className='w-full max-w-section-default flex flex-col lg:flex-row items-center justify-center gap-10 px-4'>
                 
-                <div className='w-full lg:w-[636px] lg:h-[462px] lg:rounded-2xl lg:overflow-hidden order-1 lg:order-2'>
-                    <img src="./course_photo.png" className='w-full h-full object-cover rounded-2xl lg:rounded-none' alt="" />
+                {/* --- Coluna da Imagem --- */}
+                {/* Largura total no mobile, 636px no desktop */}
+                <div className='w-full lg:w-[636px] lg:h-[462px] rounded-2xl overflow-hidden order-1 lg:order-2'>
+                    <img src="./course_photo.png" className='w-full h-full object-cover' alt="" />
                 </div>
 
-                <div className='w-full lg:w-[636px] flex flex-col gap-8 order-2 lg:order-1 px-0 sm:px-10 lg:px-0 mt-8 lg:mt-0'>
+                {/* --- Coluna do Texto --- */}
+                {/* Largura total no mobile, 636px no desktop */}
+                <div className='w-full lg:w-[636px] flex flex-col gap-8 order-2 lg:order-1 mt-8 lg:mt-0'>
                     <div className='flex flex-col gap-6'>
                         <div className='flex items-center gap-4'>
                             <Tag name="TÉCNICO" className="border-white text-white" />
@@ -27,7 +29,7 @@ function HeroSection() {
                         </div>
                     </div>
 
-                    <div className='flex flex-col sm:flex-row items-center gap-8 mt-4'>
+                    <div className='flex flex-col sm:flex-row items-center sm:justify-between gap-8 mt-4'>
                         <div className='flex items-center gap-6'>
                             <div>
                                 <div className='flex items-center gap-4'>

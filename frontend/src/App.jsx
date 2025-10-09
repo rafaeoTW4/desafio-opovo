@@ -30,7 +30,7 @@ const learningModulesData = [
 
 function App() {
   return (
-    // AQUI ESTÁ A ÚNICA MUDANÇA: adicionada a classe 'overflow-hidden'
+    
     <div className="flex min-h-screen w-full flex-col items-center bg-uane-background overflow-hidden">
       <Navbar />
       <HeroSection />

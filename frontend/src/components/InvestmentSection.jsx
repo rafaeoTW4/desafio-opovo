@@ -4,7 +4,7 @@ import React from 'react';
 
 function InvestmentSection() {
   return (
-    // AQUI ESTÁ A ÚNICA MUDANÇA: 'sm:px-10' foi trocado por 'md:px-2 lg:px-10'
+    
     <section className="w-full py-16 px-4 md:px-2 lg:px-10">
       <div className="w-full max-w-[1296px] mx-auto">
 

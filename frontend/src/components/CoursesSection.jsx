@@ -11,7 +11,7 @@ const ChevronRightIcon = () => (
     </svg>
 );
 
-// --- ÍCONE DA SETA ESQUERDA (CÓDIGO COMPLETO RESTAURADO) ---
+// --- ÍCONE DA SETA ESQUERDA ---
 const ArrowLeftIcon = () => {
   return (
     <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ const ArrowLeftIcon = () => {
   );
 };
 
-// --- ÍCONE DA SETA DIREITA (CÓDIGO COMPLETO RESTAURADO) ---
+// --- ÍCONE DA SETA DIREITA ---
 const ArrowRightIcon = () => {
   return (
     <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">

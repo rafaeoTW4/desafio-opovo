@@ -4,11 +4,11 @@ import React from 'react';
 
 const FooterLogo = ({ className }) => {
   return (
-    // AQUI ESTÁ A MUDANÇA: altere os valores de width e height
+    
     <svg 
       width="196" 
       height="63" 
-      viewBox="..." // Mantenha o viewBox original do seu SVG
+      viewBox="..." 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg" 
       className={className}

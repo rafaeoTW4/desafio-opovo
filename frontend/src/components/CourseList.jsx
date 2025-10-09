@@ -3,8 +3,7 @@ import axios from 'axios';
 import CourseCard from './CourseCard';
 
 const CourseList = () => {
-  // ATENÇÃO: Substitua 'IP_DA_SUA_VM' pela sua configuração.
-  // A porta agora está corrigida para '8000'
+  
   const API_URL = 'http://192.168.220.4:8000/api.php'; 
 
   const [cursos, setCursos] = useState([]);

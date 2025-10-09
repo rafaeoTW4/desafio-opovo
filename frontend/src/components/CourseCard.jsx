@@ -5,7 +5,7 @@ import Tag from './Tag';
 
 const CourseCard = ({ imageSrc, tags, title, author }) => {
   return (
-    // MUDANÇA PRINCIPAL: Largura em % para o efeito de carrossel
+    
     <div className="w-[80%] sm:w-[45%] lg:w-1/4 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-uane-blue group h-[550px] flex flex-col">
       <img 
         src={imageSrc} 
